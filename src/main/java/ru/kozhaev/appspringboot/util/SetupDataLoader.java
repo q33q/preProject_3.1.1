@@ -8,7 +8,7 @@ import ru.kozhaev.appspringboot.entity.Role;
 import ru.kozhaev.appspringboot.entity.User;
 import ru.kozhaev.appspringboot.repository.RoleRepository;
 import ru.kozhaev.appspringboot.repository.UserRepository;
-import ru.kozhaev.appspringboot.service.UserService;
+import ru.kozhaev.appspringboot.service.UserServiceImpl;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -20,7 +20,7 @@ import java.util.Objects;
 public class SetupDataLoader implements ApplicationListener<ContextRefreshedEvent> {
     private final UserRepository userRepository;
     private final RoleRepository roleRepository;
-    private final UserService userService;
+    private final UserServiceImpl userService;
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {

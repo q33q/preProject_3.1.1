@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import ru.kozhaev.appspringboot.entity.User;
 import ru.kozhaev.appspringboot.repository.RoleRepository;
 import ru.kozhaev.appspringboot.repository.UserRepository;
-import ru.kozhaev.appspringboot.service.UserService;
+import ru.kozhaev.appspringboot.service.UserServiceImpl;
 
 @Controller
 @AllArgsConstructor
@@ -17,7 +17,7 @@ import ru.kozhaev.appspringboot.service.UserService;
 public class AdminController {
     private final RoleRepository roleRepository;
     private final UserRepository userRepository;
-    private final UserService userService;
+    private final UserServiceImpl userService;
 
     @GetMapping()
     public String index(Model model) {
